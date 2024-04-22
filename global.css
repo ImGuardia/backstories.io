@@ -48,17 +48,6 @@ nav ul li{
     color: #fff;
 }
 
-nav ul li:visited{
-    background: #FFFFFF;
-}
-nav ul li:nth-child(2):hover{
-    background: linear-gradient(90deg, #EDEB66 0%, #E8B885 50%, #D851AE 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-
 .content {
     text-align: center;
 }
