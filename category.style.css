@@ -121,15 +121,8 @@ nav ul li a{
 }
 
 .back-video {
-    /* position: absolute; */
-    /* right: 0;
-    bottom: 0; */
-    /* top: 0;
-    left: 0;
-    z-index: -1; */
     width: 100%;
     aspect-ratio: 16 / 9;
-    /* object-fit: cover; */
 }
 
 footer {
@@ -159,10 +152,6 @@ footer a:visited {
 footer a:hover {
     color: var(--hover-color);
 }
-
-/* nav a:active {
-    font-weight: 500;
-} */
 
 h2 {
     font-size: 2.5rem;
