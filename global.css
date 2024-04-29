@@ -56,7 +56,7 @@ nav ul li{
     margin-left: 40px;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     color: #fff;
     font-size: 17px;
@@ -68,7 +68,6 @@ nav ul li a{
 
 .hero > video {
     grid-area: 1 / 1 / -1 / -1;
-    
 }
 
 .hero .content {
@@ -92,14 +91,12 @@ nav ul li a{
     -webkit-text-stroke: 2px #fff;
     color: transparent;
 }
-
 .content h2 {
     font-size: 3rem;
     color: #fff;
     font-weight: bold;
     transition: 0.5s;
 }
-
 .content a{
     text-decoration: none;
     display: inline-block;
@@ -220,7 +217,6 @@ footer a:visited {
 footer a:hover {
     color: var(--hover-color);
 }
-
 @media (max-width: 900px) {
 
     .content h1 {
