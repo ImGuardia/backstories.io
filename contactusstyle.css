@@ -1,0 +1,93 @@
+* , * ::before, * ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background-color: #171717;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Proxima Nova', sans-serif;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5rem;
+    background-color: black;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 1rem;
+}
+
+nav ul li {
+    margin-right: 2rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 5rem;
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+.left {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.left h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.left p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.right {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.right h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.right p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
