@@ -1,0 +1,12 @@
+<svg width="95" height="31" viewBox="0 0 95 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Property 1=hover">
+<path id="Vector 2" d="M1 2L47.5 28L94 2" stroke="url(#paint0_linear_254_303)" stroke-width="4"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_254_303" x1="1" y1="15" x2="94" y2="15" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EDEB66"/>
+<stop offset="0.49" stop-color="#E8B885"/>
+<stop offset="1" stop-color="#D851AE"/>
+</linearGradient>
+</defs>
+</svg>
