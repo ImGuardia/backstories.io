@@ -44,10 +44,37 @@ nav {
 
 nav .logo {
     width: 200px;
+<<<<<<< Updated upstream
 }
 
 nav .logo:hover {
     width: 205px;
+=======
+    padding: 20px;
+ }
+
+button {
+    float: right;
+    background-color: rgba(0,0,0,0.0);
+    color: white;
+    border: none;
+    font-family: var(--primary-font);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+.dropdown {
+    position: relative;
+    background-color: rgba(0,0,0,0.9);
+    float: right;
+    width: 100%;
+    font-family: var(--primary-font);
+    top: 100%;
+    padding-left: 80px;
+    padding-right: 80px;
+>>>>>>> Stashed changes
 }
 
 nav ul li{
@@ -58,8 +85,38 @@ nav ul li{
 
 nav ul li a{
     text-decoration: none;
+<<<<<<< Updated upstream
     color: #fff;
     font-size: 17px;
+=======
+    display: block;
+    font-family: var(--primary-font);
+}
+
+.dropdown-content a:hover {
+    background-color: grey;
+}
+
+.dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    font-family: var(--primary-font);
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: grey;
+}
+
+.dropdown a:hover {
+    background-color: grey;
+}
+
+.show {
+    display: block !important;
+>>>>>>> Stashed changes
 }
 
 .hero {
@@ -250,6 +307,7 @@ footer a:hover {
     }
 }
 
+<<<<<<< Updated upstream
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -287,4 +345,70 @@ footer a:hover {
 .right p {
     font-size: 1rem;
     margin-bottom: 1rem;
+=======
+.head, .wrapper {
+    color: white;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.head {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.head h2 {
+    font-size: 4rem;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid;
+    border-image: linear-gradient(to right, #FA6A4B, #AE87FF, #0AEBC2) 1;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    line-height: 1.7;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    padding: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
+    align-content: center;
+    gap: 3rem;
+}
+
+.box h3 {
+    font-size: 2.3rem;
+}
+
+.box h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.box img {
+    width: 100%;
+}
+
+.bios p {
+    padding: 0;
+}
+
+@media (max-width: 900px) {
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        padding-left: 40px;
+        padding-right: 40px;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+>>>>>>> Stashed changes
 }
