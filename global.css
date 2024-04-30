@@ -6,8 +6,9 @@
 }
 
 :root {
-    --background-color: #121212;
-    --hover-color: #E8B885;
+    --background-color: #171717;
+    --hover-color: white;
+    --footer-hover-color: #E8B885;
 }
 
 
@@ -60,7 +61,6 @@ button {
 
 }
 
-
 .dropdown {
     position: relative;
     background-color: rgba(0,0,0,0.9);
@@ -92,6 +92,12 @@ button {
 
 .dropdown-content a:hover {
     background-color: grey;
+}
+
+nav .logo:hover {
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+
 }
 
 
@@ -165,6 +171,7 @@ button {
 
 .content a:hover {
     background-color: var(--hover-color);
+    color: var(--background-color);
 }
 
 @media (min-width: 800px) {
@@ -226,14 +233,39 @@ h1 {
     font-size: 3rem;
     text-transform: uppercase;
     text-shadow: 2px 2px 3px rgb(0, 0, 0, 0.35);
+    transition: 0.5s ease ease-in-out;
 }
 
-.categories h2:nth-child(1) {
-    background-image: url("assets/art.jpg");
+
+/* .categories h2:nth-child(1) { */
+    /* background-image: url("assets/art.jpg"); */
+/* } */
+
+
+.grid-stack{
+    display: grid;
+    grid-template-areas: "stack";
 }
 
-.categories h2:nth-child(2) {
-    background-image: url("assets/film.jpg");
+.grid-stack > * {
+    grid-area: stack;
+    place-self: center;
+}
+
+.grid-stack h2 {
+    z-index: 1;
+}
+
+.grid-stack img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(1);
+    transition: filter 0.5s ease;
+}
+
+.categories img:hover {
+    filter: brightness(0.2);
 }
 
 .categories h2:nth-child(3) {
@@ -273,7 +305,7 @@ footer a:visited {
 }
 
 footer a:hover {
-    color: var(--hover-color);
+    color: var(--footer-hover-color);
 }
 @media (max-width: 900px) {
 
