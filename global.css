@@ -2,18 +2,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Proxima Nova', sans-serif;
 }
 
 :root {
-    --background-color: #121212;
-    --hover-color: #E8B885;
+    --background-color: #171717;
+    --hover-color: white;
+    --footer-hover-color: #E8B885;
 }
 
 
 body {
     background-color: var(--background-color);
+    font-family: 'Proxima Nova', sans-serif;
     line-height: 1.5;
+}
+
+button {
+    font: inherit;
 }
 
 p {
@@ -24,35 +29,46 @@ p {
 
 header {
     display: grid;
+    transition: height 0.3s ease;
 }
 
+header.small {
+    height: 50px;
+}
+
+
+nav .logo {
+    width: 200px;
+    padding: 20px;
+}
+
+nav img {
+    display: block;
+    max-width: 100%;
+}
 
 .hero {
     background-image: linear-gradient(rgba(12,3,51,0.3),rgba(12,3,51,0.3));
-    display: flex;
-    align-items: center;
-    justify-content: left;
 }
 
-nav {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    align-items: center;
+@media (min-width: 800px) {
+    .hero {
+        grid-area: 1 / 1 / -1 / -1;
+    }
+
+    nav {
+        grid-area: 1 / 1 / 2 / -1;
+        /* You must explicitly set this, otherwise it will move below .hero */
+        /* DO NOT CHANGE THE INDEX, OTHERWISE .content WILL NOT WORK. I HAVE NO CLUE WHY */
+    }
 }
 
- nav .logo {
-    width: 200px;
-    padding: 20px;
- }
+/* Dropdown styling */
 
 button {
-    float: right;
     background-color: rgba(0,0,0,0.0);
     color: white;
     border: none;
-    font-family: var(--primary-font);
     font-size: 16px;
     cursor: pointer;
     padding: 10px 20px;
@@ -60,39 +76,102 @@ button {
 
 }
 
-
 .dropdown {
     position: relative;
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0,0,0,0);
     float: right;
     width: 100%;
-    font-family: var(--primary-font);
-    top: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s ease-in-out;
 }
+
+.dropdown:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: black;
-    min-width: 160px;
+    background-color: rgba(0,0,0,0.5);
+    width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    font-family: var(--primary-font);
     right: 0;
+    top: 88px;
     overflow: auto;
 }
+
+
 
 .dropdown-content a {
     color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    font-family: var(--primary-font);
+    text-align: center;
+    font-size: 24px;
 }
 
-.dropdown-content a:hover {
-    background-color: grey;
+.dropdown-content a:nth-child(1):hover {
+    background: linear-gradient(to right, #D851AE, #E8B885, #EDEB66);
+    background-size: 200% 200%;
+    animation: rainbow 2s ease-in-out infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
+.dropdown-content a:nth-child(2):hover {
+    background: linear-gradient(to right, #114972, #69C9FF, #FFD76F);
+    background-size: 200% 200%;
+    animation: rainbow 2s ease-in-out infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dropdown-content a:nth-child(3):hover {
+    background: linear-gradient(to right, #1C609E, #4FA495, #FF8170);
+    background-size: 200% 200%;
+    animation: rainbow 2s ease-in-out infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dropdown-content a:nth-child(4):hover {
+    background: linear-gradient(to right, #7951A0, #C171FF, #FA6A4B);
+    background-size: 200% 200%;
+    animation: rainbow 2s ease-in-out infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dropdown-content a:nth-child(5):hover {
+    background: linear-gradient(to right, #ffffff , #275366, #182E42);
+    background-size: 200% 200%;
+    animation: rainbow 2s ease-in-out infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dropdown-content a:nth-child(6):hover {
+    background: linear-gradient(to right, #FFFFFF , #275366, #182E42);
+    background-size: 200% 200%;
+    animation: rainbow 2s ease-in-out infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
 
 
 .dropbtn {
@@ -101,34 +180,18 @@ button {
     font-size: 24px;
     border: none;
     cursor: pointer;
-    font-family: var(--primary-font);
+    float: right;
 }
 
 .dropbtn:hover, .dropbtn:focus {
-    background-color: grey;
-}
-
-.dropdown a:hover {
-    background-color: grey;
+    -webkit-text-stroke: white 1px;
 }
 
 .show {
     display: block !important;
 }
 
-.hero {
-    display: grid;
-}
-
-.hero > video {
-    grid-area: 1 / 1 / -1 / -1;
-    z-index: -1;
-}
-
-.hero .content {
-    grid-area: 1 / 1 / -1 / -1;
-    place-self: left center;
-}
+/* End of dropdown styling */
 
 .content {
     text-align: center;
@@ -138,19 +201,21 @@ button {
     font-size: 9rem;
     color: #fff;
     font-weight: bold;
-    transition: 0.5s;
     padding-bottom: 0;
+    transition: all 0.25s ease-in-out;
 }
 
-.content h1:hover{
-    -webkit-text-stroke: 2px #fff;
+.content h1:hover {
+    -webkit-text-stroke: white 2px;
+    text-stroke: 2px white;
     color: transparent;
+
 }
+
 .content h2 {
     font-size: 3rem;
-    color: #fff;
     font-weight: bold;
-    transition: 0.5s;
+    color: #fff;
 }
 .content a {
     text-decoration: none;
@@ -165,22 +230,58 @@ button {
 
 .content a:hover {
     background-color: var(--hover-color);
+    color: var(--background-color);
 }
 
-@media (min-width: 800px) {
-    .hero {
-        grid-area: 1 / 1 / -1 / -1;
-    }
+.artcolor {
+    background: linear-gradient(to right, #D851AE, #E8B885, #EDEB66);
+    background-size: 300% 300%;
+    animation: rainbow 2s ease-in-out infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-    .hero .content {
-        place-self: center center;
-    }
+.filmcolor {
+    background: linear-gradient(to right, #114972, #69C9FF, #FFD76F);
+    background-size: 300% 300%;
+    animation: rainbow 2s ease-in-out infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-    nav {
-        grid-area: 1 / 1 / 2 / -1;
-        place-self: start center;
+.multimediacolor {
+    background: linear-gradient(to right, #1C609E, #4FA495, #FF8170);
+    background-size: 300% 300%;
+    animation: rainbow 2s ease-in-out infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.musiccolor {
+    background: linear-gradient(to right, #7951A0, #C171FF, #FA6A4B);
+    background-size: 300% 300%;
+    animation: rainbow 2s ease-in-out infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
+
+
 
 .back-video {
     width: 100%;
@@ -219,30 +320,50 @@ h1 {
 }
 
 .categories h2 {
-    padding-top: 100px;
-    padding-bottom: 100px;
     background-size: cover;
     background-position: center center;
     font-size: 3rem;
     text-transform: uppercase;
     text-shadow: 2px 2px 3px rgb(0, 0, 0, 0.35);
+    transition: 0.5s ease ease-in-out;
 }
 
-.categories h2:nth-child(1) {
-    background-image: url("assets/art.jpg");
+
+.grid-stack{
+    display: grid;
+    grid-template-areas: "stack";
 }
 
-.categories h2:nth-child(2) {
-    background-image: url("assets/film.jpg");
+.grid-stack > * {
+    grid-area: stack;
+    place-self: center;
 }
 
-.categories h2:nth-child(3) {
-    background-image: url("assets/multimedia.jpg");
+.grid-stack > video {
+    z-index: -1;
 }
 
-.categories h2:nth-child(4) {
-    background-image: url("assets/music.jpg");
+.grid-stack h2 {
+    z-index: 1;
 }
+
+.grid-stack h3 {
+    z-index: 1;
+}
+
+.grid-stack img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(1);
+    transition: filter 0.5s ease;
+}
+
+
+.categories img:hover {
+    filter: brightness(0.2);
+}
+
 
 a{
     text-decoration: none;
@@ -250,7 +371,9 @@ a{
 
 footer {
     background-image: linear-gradient(135deg, #275366, #182E42);
-    padding: 80px;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
     color: white;
 }
 
@@ -273,8 +396,9 @@ footer a:visited {
 }
 
 footer a:hover {
-    color: var(--hover-color);
+    color: var(--footer-hover-color);
 }
+
 @media (max-width: 900px) {
 
     .content h1 {
@@ -298,8 +422,331 @@ footer a:hover {
         flex-direction: column;
     }
 
-    nav, .intro, .categories, footer {
+    .intro, .categories, footer {
         padding-left: 40px;
         padding-right: 40px;
+    }
+}
+
+/* This is for the Contact Us Page */
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5rem;
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+.contact-container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+}
+
+.left {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.left h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.left p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.right {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.right h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.right p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+
+/* This is for the Category pages */
+
+.tips h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.artists {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: white;
+    padding: 80px;
+    gap: 2rem;
+}
+
+.artists h3 {
+    text-align: center;
+    place-content: end;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.artists h3:nth-child(1) {
+    aspect-ratio: 4 / 5;
+    background-image: url("assets/placeholder-headshot.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.artists h3:nth-child(2) {
+    aspect-ratio: 4 / 5;
+    background-image: url("assets/placeholder-headshot.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.specifics {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    color: white;
+}
+
+.details {
+    grid-area: 1 / 2 / 2 / 3;
+    margin-right: 80px;
+    margin-left: 2rem;
+}
+
+.artdetails {
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, #D851AE, #E8B885, #EDEB66) 1;
+}
+
+.filmdetails {
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, #114972, #69C9FF, #FFD76F) 1;
+}
+
+.multdetails {
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, #1C609E, #4FA495, #FF8170) 1;
+}
+
+.musicdetails {
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, #7951A0, #C171FF, #FA6A4B) 1;
+}
+
+.details h2 {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    text-align: right;
+}
+
+.details p {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.closeup-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.closeup-images img {
+    width: 30%;
+}
+
+.art-tips {
+    background-image: url("assets/art-tip.png");
+    background-size: cover;
+}
+
+.film-tips {
+    background-image: url("assets/film-tip.png");
+    background-size: cover;
+}
+
+.mult-tips {
+    background-image: url("assets/mult-tip.png");
+    background-size: cover;
+}
+
+.music-tips {
+    background-image: url("assets/music-tip.png");
+    background-size: cover;
+}
+
+.tips {
+    grid-column: 1 / 1 / 2 / 2;
+    padding: 2rem;
+    padding-right: 80px;
+    padding-left: 80px;
+}
+
+.tips h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-top: 4rem;
+}
+
+.tips h2 {
+    text-transform: uppercase;
+    padding-top: 1rem;
+}
+
+.tips h3, p {
+    padding-bottom: 1rem;
+}
+
+.tips p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+}
+
+.name {
+    font-style: italic;
+    text-align: right;
+    padding-top: 2.5rem;
+}
+
+.resources {
+    color: white;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.resources h2 {
+    padding-bottom: 2rem;
+    font-size: 3rem;
+}
+
+.externalresources {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: white;
+    text-align: center;
+    gap: 3rem;
+    text-align: center;
+}
+
+.externalresources h3 {
+    background-size: cover;
+    background-position: center center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 3px rgb(0, 0, 0, 0.35);
+    transition: filter 0.5s ease-in-out;
+}
+
+.externalresources img:hover {
+    filter: brightness(0.2);
+}
+
+
+@media screen and (max-width: 900px) {
+
+    .dropdown-content a{
+        font-size: 15px;
+    }
+
+    .externalresources {
+        gap: 2rem;
+    }
+
+    .artists {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .artists h3 {
+        flex: 1 1 20ch;
+    }
+
+    .specifics {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .artdetails, .filmdetails, .multdetails, .musicdetails {
+        border-bottom: 0;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .resources h2 {
+        font-size: 2rem;
+        text-align:center;
+    }
+
+
+    .externalresources h3 {
+        font-size: 1.5rem;
+    }
+
+
+    .details h2 {
+        text-align: center;
+    }
+
+    .tips {
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+
+    .dropdown-content a{
+        font-size: 12px;
+    }
+
+
+    .closeup-images {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .closeup-images img { 
+        width: 100%;
+    }
+
+    .externalresources {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .resources h2 {
+        font-size: 2rem;
+    }
+
+    .externalresources h3 {
+        font-size: 2rem;
     }
 }
