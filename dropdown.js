@@ -16,7 +16,13 @@ document.addEventListener('DOMContentLoaded', function() {
             myDropdown.classList.remove('show');
         }
     });
+    myDropdown.addEventListener('mouseleave', function() {
+        myDropdown.classList.remove('show');
+    });
+    
 });
+
+
 
 
 // window.onscroll = function() {

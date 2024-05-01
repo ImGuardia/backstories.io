@@ -78,37 +78,101 @@ button {
 
 .dropdown {
     position: relative;
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0,0,0,0);
     float: right;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: 0.5s ease-in-out;
+}
+
+.dropdown:hover {
+    background-color: rgba(0,0,0,0.5);
 }
 
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: black;
+    background-color: rgba(0,0,0,0.5);
     width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     right: 0;
-    top: 80px;
+    top: 88px;
     overflow: auto;
 }
+
+
 
 .dropdown-content a {
     color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    text-align: center;
+    font-size: 24px;
 }
 
-.dropdown-content a:hover {
-    background-color: grey;
+.dropdown-content a:nth-child(1):hover {
+    background: linear-gradient(to right, #D851AE, #E8B885, #EDEB66);
+    background-size: 200% 200%;
+    animation: rainbow 2s ease-in-out infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
+.dropdown-content a:nth-child(2):hover {
+    background: linear-gradient(to right, #114972, #69C9FF, #FFD76F);
+    background-size: 200% 200%;
+    animation: rainbow 2s ease-in-out infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dropdown-content a:nth-child(3):hover {
+    background: linear-gradient(to right, #1C609E, #4FA495, #FF8170);
+    background-size: 200% 200%;
+    animation: rainbow 2s ease-in-out infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dropdown-content a:nth-child(4):hover {
+    background: linear-gradient(to right, #7951A0, #C171FF, #FA6A4B);
+    background-size: 200% 200%;
+    animation: rainbow 2s ease-in-out infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dropdown-content a:nth-child(5):hover {
+    background: linear-gradient(to right, #ffffff , #275366, #182E42);
+    background-size: 200% 200%;
+    animation: rainbow 2s ease-in-out infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dropdown-content a:nth-child(6):hover {
+    background: linear-gradient(to right, #FFFFFF , #275366, #182E42);
+    background-size: 200% 200%;
+    animation: rainbow 2s ease-in-out infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
+
 
 .dropbtn {
     color: white;
@@ -120,7 +184,7 @@ button {
 }
 
 .dropbtn:hover, .dropbtn:focus {
-    background-color: grey;
+    -webkit-text-stroke: white 1px;
 }
 
 .show {
@@ -137,19 +201,21 @@ button {
     font-size: 9rem;
     color: #fff;
     font-weight: bold;
-    transition: 0.5s;
     padding-bottom: 0;
+    transition: all 0.25s ease-in-out;
 }
 
-.content h1:hover{
-    -webkit-text-stroke: 2px #fff;
+.content h1:hover {
+    -webkit-text-stroke: white 2px;
+    text-stroke: 2px white;
     color: transparent;
+
 }
+
 .content h2 {
     font-size: 3rem;
-    color: #fff;
     font-weight: bold;
-    transition: 0.5s;
+    color: #fff;
 }
 .content a {
     text-decoration: none;
@@ -166,6 +232,56 @@ button {
     background-color: var(--hover-color);
     color: var(--background-color);
 }
+
+.artcolor {
+    background: linear-gradient(to right, #D851AE, #E8B885, #EDEB66);
+    background-size: 300% 300%;
+    animation: rainbow 2s ease-in-out infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.filmcolor {
+    background: linear-gradient(to right, #114972, #69C9FF, #FFD76F);
+    background-size: 300% 300%;
+    animation: rainbow 2s ease-in-out infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.multimediacolor {
+    background: linear-gradient(to right, #1C609E, #4FA495, #FF8170);
+    background-size: 300% 300%;
+    animation: rainbow 2s ease-in-out infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.musiccolor {
+    background: linear-gradient(to right, #7951A0, #C171FF, #FA6A4B);
+    background-size: 300% 300%;
+    animation: rainbow 2s ease-in-out infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
 
 .back-video {
     width: 100%;
@@ -255,7 +371,9 @@ a{
 
 footer {
     background-image: linear-gradient(135deg, #275366, #182E42);
-    padding: 80px;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
     color: white;
 }
 
@@ -315,10 +433,19 @@ footer a:hover {
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     padding: 5rem;
     gap: 2rem;
     margin: 0 auto;
+}
+
+.contact-container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
 }
 
 .left {
@@ -541,6 +668,10 @@ footer a:hover {
 
 @media screen and (max-width: 900px) {
 
+    .dropdown-content a{
+        font-size: 15px;
+    }
+
     .externalresources {
         gap: 2rem;
     }
@@ -592,6 +723,9 @@ footer a:hover {
 
 @media screen and (max-width: 700px) {
 
+    .dropdown-content a{
+        font-size: 12px;
+    }
 
 
     .closeup-images {
