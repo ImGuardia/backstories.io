@@ -54,14 +54,16 @@ nav img {
 @media (min-width: 800px) {
     .hero {
         grid-area: 1 / 1 / -1 / -1;
-    }  
-    
+    }
+
     nav {
         grid-area: 1 / 1 / 2 / -1;
         /* You must explicitly set this, otherwise it will move below .hero */
         /* DO NOT CHANGE THE INDEX, OTHERWISE .content WILL NOT WORK. I HAVE NO CLUE WHY */
     }
 }
+
+/* Dropdown styling */
 
 button {
     background-color: rgba(0,0,0,0.0);
@@ -124,6 +126,8 @@ button {
 .show {
     display: block !important;
 }
+
+/* End of dropdown styling */
 
 .content {
     text-align: center;
@@ -208,9 +212,6 @@ h1 {
     transition: 0.5s ease ease-in-out;
 }
 
-.categories h2:nth-child(1) {
-    background-image: url("assets/art.jpg");
-}
 
 .grid-stack{
     display: grid;
@@ -227,6 +228,10 @@ h1 {
 }
 
 .grid-stack h2 {
+    z-index: 1;
+}
+
+.grid-stack h3 {
     z-index: 1;
 }
 
@@ -302,5 +307,312 @@ footer a:hover {
     .intro, .categories, footer {
         padding-left: 40px;
         padding-right: 40px;
+    }
+}
+
+/* This is for the Contact Us Page */
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 5rem;
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+.left {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.left h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.left p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.right {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.right h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.right p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+
+/* This is for the Category pages */
+
+.tips h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.artists {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: white;
+    padding: 80px;
+    gap: 2rem;
+}
+
+.artists h3 {
+    text-align: center;
+    place-content: end;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.artists h3:nth-child(1) {
+    aspect-ratio: 4 / 5;
+    background-image: url("assets/placeholder-headshot.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.artists h3:nth-child(2) {
+    aspect-ratio: 4 / 5;
+    background-image: url("assets/placeholder-headshot.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.specifics {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    color: white;
+}
+
+.details {
+    grid-area: 1 / 2 / 2 / 3;
+    margin-right: 80px;
+    margin-left: 2rem;
+}
+
+.artdetails {
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, #D851AE, #E8B885, #EDEB66) 1;
+}
+
+.filmdetails {
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, #114972, #69C9FF, #FFD76F) 1;
+}
+
+.multdetails {
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, #1C609E, #4FA495, #FF8170) 1;
+}
+
+.musicdetails {
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, #7951A0, #C171FF, #FA6A4B) 1;
+}
+
+.details h2 {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    text-align: right;
+}
+
+.details p {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.closeup-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.closeup-images img {
+    width: 30%;
+}
+
+.art-tips {
+    background-image: url("assets/art-tip.png");
+    background-size: cover;
+}
+
+.film-tips {
+    background-image: url("assets/film-tip.png");
+    background-size: cover;
+}
+
+.mult-tips {
+    background-image: url("assets/mult-tip.png");
+    background-size: cover;
+}
+
+.music-tips {
+    background-image: url("assets/music-tip.png");
+    background-size: cover;
+}
+
+.tips {
+    grid-column: 1 / 1 / 2 / 2;
+    padding: 2rem;
+    padding-right: 80px;
+    padding-left: 80px;
+}
+
+.tips h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-top: 4rem;
+}
+
+.tips h2 {
+    text-transform: uppercase;
+    padding-top: 1rem;
+}
+
+.tips h3, p {
+    padding-bottom: 1rem;
+}
+
+.tips p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+}
+
+.name {
+    font-style: italic;
+    text-align: right;
+    padding-top: 2.5rem;
+}
+
+.resources {
+    color: white;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.resources h2 {
+    padding-bottom: 2rem;
+    font-size: 3rem;
+}
+
+.externalresources {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: white;
+    text-align: center;
+    gap: 3rem;
+    text-align: center;
+}
+
+.externalresources h3 {
+    background-size: cover;
+    background-position: center center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 3px rgb(0, 0, 0, 0.35);
+    transition: filter 0.5s ease-in-out;
+}
+
+.externalresources img:hover {
+    filter: brightness(0.2);
+}
+
+
+@media screen and (max-width: 900px) {
+
+    .externalresources {
+        gap: 2rem;
+    }
+
+    .artists {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .artists h3 {
+        flex: 1 1 20ch;
+    }
+
+    .specifics {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .artdetails, .filmdetails, .multdetails, .musicdetails {
+        border-bottom: 0;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .resources h2 {
+        font-size: 2rem;
+        text-align:center;
+    }
+
+
+    .externalresources h3 {
+        font-size: 1.5rem;
+    }
+
+
+    .details h2 {
+        text-align: center;
+    }
+
+    .tips {
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+
+
+
+    .closeup-images {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .closeup-images img { 
+        width: 100%;
+    }
+
+    .externalresources {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .resources h2 {
+        font-size: 2rem;
+    }
+
+    .externalresources h3 {
+        font-size: 2rem;
     }
 }
