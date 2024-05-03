@@ -1,5 +1,54 @@
-extends layout
+doctype html
+head
+  meta(charset='utf-8')
+  title Website with Background Video
+  link(rel='stylesheet' href='/myapp/public/stylesheets/global.css')
+  script(src='/myapp/public/javascripts/dropdown.js')
+header
+  nav
+    .dropdown
+      a(href='index.pug')
+        img.logo(src='/myapp/public/images/backstorieslogo-white.png' title='Logo')
+      button#myButton.dropbtn(onclick='toggleDropDown()') Menu
+      #myDropdown.dropdown-content
+        a(href='art.pug') Art
+        a(href='film.pug') Film
+        a(href='multimedia.pug') Multimedia
+        a(href='music.pug') Music
+        a(href='aboutus.pug') About Us
+        a(href='contactus.pug') Contact Us
+  .hero.grid-stack
+    video.back-video(autoplay='' loop='' muted='' plays-inline='')
+      source(src='/myapp/public/images/compressedtrailer.mp4' type='video/mp4')
+    .content
+      h1 Backstories
+      h2 CLU Creatives Edition
+      a(href='#') Full Playlist
+.intro
+  h1 Subhead
+  p
+    | Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, corrupti ipsa libero atque accusamus hic vel autem et, dignissimos iusto dolore nostrum facere aspernatur quibusdam at rem sint nulla esse. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, corrupti ipsa libero atque accusamus hic vel autem et, dignissimos iusto dolore nostrum facere aspernatur quibusdam at rem sint nulla esse.
+.categories
+  .grid-stack
+    a(href='art.pug')
+      img(src='/myapp/public/images/art.jpg' alt='')
+    h2 Art
+  .grid-stack
+    a(href='film.pug' alt='')
+      img(src='/myapp/public/images/film.jpg' alt='')
+    h2 Film
+  .grid-stack
+    a(href='multimedia.pug' alt='')
+      img(src='/myapp/public/images/multimedia.jpg' alt='')
+    h2 Multimedia
+  .grid-stack
+    a(href='music.pug' alt='')
+      img(src='/myapp/public/images/music.jpg' alt='')
+    h2 Music
+footer
+  h5
+    a(href='aboutus.pug') About Us
+  h5
+    a(href='contact.pug') Contact Us
+  p.copyright &copy; 2024 Backstories Production
 
-block content
-  h1= title
-  p Welcome to #{title}

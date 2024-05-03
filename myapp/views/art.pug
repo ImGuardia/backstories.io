@@ -1,0 +1,78 @@
+doctype html
+head
+  meta(charset='utf-8')
+  title Art Category
+  link(rel='stylesheet' href='/myapp/public/stylesheets/global.css')
+  script(src='/myapp/public/javascripts/dropdown.js')
+header
+  nav
+    .dropdown
+      a(href='index.html')
+        img.logo(src='assets/backstorieslogo-white.png' title='Logo')
+      button#myButton.dropbtn(onclick='toggleDropDown()') Menu
+      #myDropdown.dropdown-content
+        a(href='art.pug') Art
+        a(href='film.pug') Film
+        a(href='multimedia.pug') Multimedia
+        a(href='music.pug') Music
+        a(href='aboutus.pug') About Us
+        a(href='contactus.pug') Contact Us
+  .hero.grid-stack
+    video.back-video(autoplay='' loop='' muted='' plays-inline='')
+      source(src='/myapp/public/images/compressed_art.mp4' type='video/mp4')
+    .content
+      .artcolor
+        h1 Art
+      a(href='#') Full Video
+.artists
+  h3 Lilyana
+  h3 Tenchi
+  p
+    | Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nisi aspernatur architecto voluptate sapiente fugit atque vitae tempore a praesentium voluptatibus eaque, dolorem consequatur eos numquam excepturi in quisquam? Nostrum.
+.specifics
+  .details.artdetails
+    h2 Details / Step-by-Step
+    .closeup-images
+      img(src='assets/placeholder-headshot.png' alt='closeup')
+      img(src='assets/placeholder-headshot.png' alt='closeup')
+      img(src='assets/placeholder-headshot.png' alt='closeup')
+    p
+      | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim aliquid excepturi a, consequuntur, ullam corrupti, ad tempora commodi eaque nisi repudiandae qui porro aut vitae vel impedit sed libero incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo temporibus debitis recusandae repellat distinctio, quo voluptates porro esse neque molestiae veniam provident eaque deleniti cumque autem libero quibusdam maiores. Reprehenderit?
+    .closeup-images
+      img(src='assets/placeholder-headshot.png' alt='closeup')
+      img(src='assets/placeholder-headshot.png' alt='closeup')
+      img(src='assets/placeholder-headshot.png' alt='closeup')
+    p
+      | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim aliquid excepturi a, consequuntur, ullam corrupti, ad tempora commodi eaque nisi repudiandae qui porro aut vitae vel impedit sed libero incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo temporibus debitis recusandae repellat distinctio, quo voluptates porro esse neque molestiae veniam provident eaque deleniti cumque autem libero quibusdam maiores. Reprehenderit?
+  .art-tips
+    .tips
+      h2 Tips &amp; Tricks
+      h3 Tip 1
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis totam rerum perferendis est dicta soluta magnam labore eaque officiis ipsa.
+      p.name &ndash; Name
+      h3 Tip 2
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis totam rerum perferendis est dicta soluta magnam labore eaque officiis ipsa.
+      p.name &ndash; Name
+.resources
+  h2 Resources
+  .externalresources
+    .grid-stack
+      a(href='#' alt='')
+        img(src='assets/art.jpg' alt='')
+      h3 Tools
+    .grid-stack
+      a(href='#' alt='')
+        img(src='assets/art.jpg' alt='')
+      h3 Platforms
+    .grid-stack
+      a(href='#' alt='')
+        img(src='assets/art.jpg' alt='')
+      h3 Tutorials
+footer
+  h5
+    a(href='aboutus.html') About Us
+  h5
+    a(href='contact.html') Contact Us
+  p.copyright &copy; 2024 Backstories Production
