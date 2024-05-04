@@ -545,7 +545,7 @@ b {
 
 .reed {
     aspect-ratio: 4 / 5;
-    background-image: url("assets/layla.jpg");
+    background-image: url("assets/reed.png");
     background-size: cover;
     background-position: center;
 }
