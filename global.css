@@ -202,7 +202,7 @@ button {
     color: #fff;
     font-weight: bold;
     padding-bottom: 0;
-    transition: all 0.25s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .content h1:hover {
@@ -215,15 +215,18 @@ button {
 .content h2 {
     font-size: 3rem;
     font-weight: bold;
+    margin-top: -30px;
+    padding-bottom: 1rem;
     color: #fff;
 }
+
 .content a {
     text-decoration: none;
     display: inline-block;
     color: #fff;
     font-size: 24px;
     border: 2px solid #fff;
-    padding: 14px 70px;
+    padding: 14px 50px;
     border-radius: 50px;
     margin-top: 20px;
 }
@@ -402,17 +405,17 @@ footer a:hover {
 @media (max-width: 900px) {
 
     .content h1 {
-        font-size: 5rem;
+        font-size: 4.7rem;
     }
 
     .content h2 {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
     .content a{
         font-size: 15px;
         border: 2px solid #fff;
-        padding: 7px 35px;
+        padding: 7px 25px;
         border-radius: 50px;
         margin-top: 0;
     }
@@ -425,6 +428,10 @@ footer a:hover {
     .intro, .categories, footer {
         padding-left: 40px;
         padding-right: 40px;
+    }
+
+    .intro h1 {
+        font-size: 2rem;
     }
 }
 
@@ -504,19 +511,80 @@ footer a:hover {
     font-size: 1.5rem;
 }
 
-.artists h3:nth-child(1) {
+b {
+    text-transform: uppercase;
+}
+
+.jamie {
     aspect-ratio: 4 / 5;
-    background-image: url("assets/placeholder-headshot.png");
+    background-image: url("assets/jamie.jpg");
     background-size: cover;
     background-position: center;
 }
 
-.artists h3:nth-child(2) {
+.layla {
+    aspect-ratio: 4 / 5;
+    background-image: url("assets/layla.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.lilyana {
+    aspect-ratio: 4 / 5;
+    background-image: url("assets/lilyana.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.tenchi {
+    aspect-ratio: 4 / 5;
+    background-image: url("assets/tenchi.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.reed {
+    aspect-ratio: 4 / 5;
+    background-image: url("assets/layla.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.josh {
+    aspect-ratio: 4 / 5;
+    background-image: url("assets/layla.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.ethan {
+    aspect-ratio: 4 / 5;
+    background-image: url("assets/layla.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.katie {
+    aspect-ratio: 4 / 5;
+    background-image: url("assets/layla.jpg");
+    background-size: cover;
+    background-position: center;
+} 
+
+
+/* .artists h3:nth-child(1) {
     aspect-ratio: 4 / 5;
     background-image: url("assets/placeholder-headshot.png");
     background-size: cover;
     background-position: center;
-}
+} */
+
+/* .artists h3:nth-child(2) {
+    aspect-ratio: 4 / 5;
+    background-image: url("assets/placeholder-headshot.png");
+    background-size: cover;
+    background-position: center;
+} */
 
 .specifics {
     display: grid;
@@ -579,26 +647,29 @@ footer a:hover {
 .art-tips {
     background-image: url("assets/art-tip.png");
     background-size: cover;
+    align-content: center;
 }
 
 .film-tips {
     background-image: url("assets/film-tip.png");
     background-size: cover;
+    align-content: center;
 }
 
 .mult-tips {
     background-image: url("assets/mult-tip.png");
     background-size: cover;
+    align-content: center;
 }
 
 .music-tips {
     background-image: url("assets/music-tip.png");
     background-size: cover;
+    align-content: center;
 }
 
 .tips {
     grid-column: 1 / 1 / 2 / 2;
-    padding: 2rem;
     padding-right: 80px;
     padding-left: 80px;
 }
@@ -612,7 +683,6 @@ footer a:hover {
 
 .tips h2 {
     text-transform: uppercase;
-    padding-top: 1rem;
 }
 
 .tips h3, p {
