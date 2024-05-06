@@ -439,13 +439,13 @@ footer a:hover {
 
 .contact-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 3fr;
     padding: 5rem;
-    gap: 2rem;
+    gap: 3rem;
     margin: 0 auto;
 }
 
-.contact-container video {
+/* .contact-container video {
         position: absolute;
         top: 0;
         left: 0;
@@ -453,22 +453,39 @@ footer a:hover {
         height: 100%;
         object-fit: cover;
         z-index: -1;
-}
+} */
 
 .left {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    border-right: 2px solid white;
+    border-image: linear-gradient(to bottom, #FA6A4B, #AE87FF, #0AEBC2) 1;
 }
 
 .left h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 4rem;
+    text-align: left;
+    padding: 0;
 }
 
 .left p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 1rem;
     color: white;
+}
+
+.left a:link {
+    text-decoration: underline;
+    font-weight: bold;
+    color: white;
+}
+
+.left a:visited {
+    color: white;
+}
+
+.left a:hover {
+    color: var(--footer-hover-color);
 }
 
 .right {
@@ -477,17 +494,30 @@ footer a:hover {
 }
 
 .right h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     color: white;
+    font-weight: normal;
 }
 
 .right p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    color: white;
+    padding-left: 0;
+}
+
+.right a:link {
+    text-decoration: none;
     color: white;
 }
 
+.right a:visited {
+    color: white;
+}
+
+.right a:hover {
+    color: var(--footer-hover-color);
+}
 
 /* This is for the Category pages */
 
@@ -545,46 +575,31 @@ b {
 
 .reed {
     aspect-ratio: 4 / 5;
-    background-image: url("assets/reed.png");
+    background-image: url("assets/reed.jpg");
     background-size: cover;
     background-position: center;
 }
 
 .josh {
     aspect-ratio: 4 / 5;
-    background-image: url("assets/layla.jpg");
+    background-image: url("assets/josh.jpg");
     background-size: cover;
     background-position: center;
 }
 
 .ethan {
     aspect-ratio: 4 / 5;
-    background-image: url("assets/layla.jpg");
+    background-image: url("assets/ethan.jpg");
     background-size: cover;
     background-position: center;
 }
 
 .katie {
     aspect-ratio: 4 / 5;
-    background-image: url("assets/layla.jpg");
+    background-image: url("assets/katie.jpg");
     background-size: cover;
     background-position: center;
 } 
-
-
-/* .artists h3:nth-child(1) {
-    aspect-ratio: 4 / 5;
-    background-image: url("assets/placeholder-headshot.png");
-    background-size: cover;
-    background-position: center;
-} */
-
-/* .artists h3:nth-child(2) {
-    aspect-ratio: 4 / 5;
-    background-image: url("assets/placeholder-headshot.png");
-    background-size: cover;
-    background-position: center;
-} */
 
 .specifics {
     display: grid;
