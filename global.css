@@ -479,6 +479,22 @@ footer a:hover {
     .intro h1 {
         font-size: 2rem;
     }
+
+    .indexcontent h1 {
+        font-size: 4.7rem;
+    }
+
+    .indexcontent h2 {
+        font-size: 1.7rem;
+    }
+
+    .indexcontent a{
+        font-size: 15px;
+        border: 2px solid #fff;
+        padding: 7px 25px;
+        border-radius: 50px;
+        margin-top: 0;
+    }
 }
 
 /* This is for the Contact Us Page */
