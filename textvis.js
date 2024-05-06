@@ -9,5 +9,5 @@ document.addEventListener("DOMContentLoaded", function () {
         // Animate the opacity to 1 over 1 second
         document.getElementById("myText").style.transition = "opacity 1s";
         document.getElementById("myText").style.opacity = 1;
-    }, 13000); // 10 seconds
+    }, 1000); // 10 seconds
 });
