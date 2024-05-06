@@ -195,6 +195,8 @@ button {
 
 .content {
     text-align: center;
+    filter: alpha(opacity=100);
+    display: none;
 }
 
 .content h1{
