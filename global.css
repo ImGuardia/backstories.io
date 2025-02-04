@@ -168,7 +168,14 @@ button {
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
+.dropdown-content a:nth-child(6):hover {
+    background: linear-gradient(to right, #FFFFFF , #275366, #182E42);
+    background-size: 200% 200%;
+    animation: rainbow 2s ease-in-out infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 
 
