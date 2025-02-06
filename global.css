@@ -180,7 +180,6 @@ button {
 
 
 
-
 .dropbtn {
     color: white;
     padding: 16px;
@@ -823,10 +822,27 @@ b {
     transition: filter 0.5s ease-in-out;
 }
 
-.externalresources img:hover {
+/* Remove or comment out existing separate hover rules */
+/* .externalresources img:hover { filter: brightness(0.2); } */
+/* .externalresources .grid-stack a:hover h3 { filter: brightness(0.2); } */
+
+/* Add unified hover rule */
+.externalresources .grid-stack a:hover img{
     filter: brightness(0.2);
 }
 
+.externalresources .grid-stack a {
+    position: relative;
+    display: inline-block;
+}
+.externalresources .grid-stack a h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 0 0 3px black;
+}
 
 @media screen and (max-width: 900px) {
 
@@ -1062,5 +1078,4 @@ b {
  .bios p {
     padding: 0;
  }
- 
- 
+
